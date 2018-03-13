@@ -1,0 +1,88 @@
+body{
+	background-color: #141414;
+	color: #fff;
+}
+.btn-link{
+	margin-top: 1vh;
+}
+.footer{
+	padding-top: 2vh;
+	min-height: 8vh;
+	color: #fff;
+}
+.large-image{
+	max-height: 60vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+.important{
+	padding: 2%;
+	font-size: 1.6rem;
+}
+.extended{
+	padding: 1.5%;
+}
+.list{
+	background-color: #e8e8e8;
+}
+#shop{
+	display: none;
+}
+#cover{
+	height: 86vh;
+}
+#proceed{
+	margin-top: 3vh;
+	margin-bottom: 1vh;
+}
+.inner.lead{
+	margin-bottom: 5vh;
+}
+h1{
+	margin-top: 3vh;
+	margin-bottom: 5vh;
+}
+.contact{
+	padding-top: 7vh;
+	min-height: 85vh;
+}
+
+#about{
+	padding: 2%;
+	margin-bottom: 2vh;
+}
+.admin{
+	padding-top: 7vh;
+	min-height: 86vh;
+}
+
+.orders{
+	margin-top: 5vh;
+	min-height: 20vh;
+}
+#register{
+	opacity: .1;
+}
+#register:hover{
+	opacity: 1;
+}
+#login{
+	opacity: .6;
+}
+#login:hover{
+	opacity: 1;
+}
+.template-render{
+	min-height: 80vh;
+	padding-bottom: 1.5vh;
+}
+.icon-list{
+	color: #000; height: 160px; overflow-y: hidden; margin-top: 0.7vh;
+}
+.fade_fun {
+   opacity: 0;
+   -webkit-transition: opacity 0.25s linear;
+      -moz-transition: opacity 0.25s linear;
+       -ms-transition: opacity 0.25s linear;
+        -o-transition: opacity 0.25s linear;
+           transition: opacity 0.25s linear;

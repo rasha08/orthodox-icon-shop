@@ -1,0 +1,1 @@
+<?php require_once('./model/logout_model.php') ?>
