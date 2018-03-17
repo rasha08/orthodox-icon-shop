@@ -44,14 +44,14 @@
 		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
 	}
 	else if (@$_GET['open'] == "Show Icon Details" || @$_GET['open'] == "Back To Icon Details"){
-//	     // print_r(json_encode($seo_icon));
 		render(
 		    'templates/header',
             array(
-		        'title' => 'Orthodox Icon Shop - Buy Orthodox Icon - '.$seo_icon['name'],
+		        'title' => 'Orthodox Icon Shop - Buy Orthodox Icon - '.formatSeoDescription($seo_icon['name']),
                 'description' => formatSeoDescription($seo_icon['description']),
                 'image' => "http://".$_SERVER['HTTP_HOST']."/images/".$seo_icon['min_img'].".jpg",
-                'url' => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']
+                'url' => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],
+                'prices' => $prices
             )
         );
 		render('open_icon');
@@ -62,7 +62,7 @@
 		render(
 		    'templates/header',
             array(
-                'title' => 'Orthodox Icon Shop - Buy Orthodox Icon - '.$seo_icon['name'].' - Full Size',
+                'title' => 'Orthodox Icon Shop - Buy Orthodox Icon - '.formatSeoDescription($seo_icon['name']).' - Full Size',
                 'description' => 'See Icon In Full Size - '.formatSeoDescription($seo_icon['description']),
                 'image' => "http://".$_SERVER['HTTP_HOST']."/images/".$seo_icon['min_img'].".jpg",
                 'url' => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']

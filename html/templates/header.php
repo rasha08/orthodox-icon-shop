@@ -20,6 +20,54 @@
     <meta name="twitter:image" content="<?= $image ?>">
     <meta name="twitter:site" content="@ortho_icons">
     <meta name="twitter:creator" content="@ortho_icons">
+    <?php if(@$prices): ?>
+        <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "Product",
+              "image": "<?= $image ?>",
+              "name": "<?= substr($title, 41) ?>",
+              "description":"<?= $description ?>",
+              "offers": {
+                "@type": "AggregateOffer",
+                "highPrice": "<?= $prices[count($prices) - 1]['price'] ?>",
+                "lowPrice": "<?= $prices[0]['price'] ?>",
+                "priceCurrency": "USD",
+                "offerCount": "<?= count($prices) ?>",
+                "offers": [
+                  <?php foreach ($prices as $price): ?>
+                    {
+                    "@type": "Offer",
+                    "url": "<?= $url ?>",
+                    "price": "<?= $price['price'] ?>",
+                    "priceCurrency": "USD"
+                  },
+                  <?php endforeach ?>
+                  {
+                    "@type": "Offer",
+                    "url": "<?= $url ?>"
+                  }
+                ]
+              }
+             }
+        </script>
+    <?php else: ?>
+        <script type="application/ld+json">
+          {
+            "@context" : "http://schema.org",
+            "@type" : "Organization",
+            "url" : "<?= $url ?>",
+            "name": "<?= $title ?>",
+            "email": "tomadackovic(at)gmail.com",
+            "logo": "http://orthodoxiconshop.com/images/favicon.ico",
+            "description": "<?= $description ?>",
+            "image": "<?= $image ?>"
+
+         }
+        </script>
+    <?php endif ?>
+
+
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Latest compiled and minified CSS -->

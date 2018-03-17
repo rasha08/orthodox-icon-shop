@@ -9,9 +9,12 @@ if (@$_GET['id']) {
     $seo_icon = mysqli_fetch_assoc($result);
 
     if ($price_id) {
+        $prices = [];
         $sql_prices = "SELECT * FROM `prices` WHERE id = $price_id";
         $result_prices = $conn->query($sql_prices);
-        $prices = mysqli_fetch_assoc($result_prices);
+        while ($price = mysqli_fetch_assoc($result_prices)) {
+           array_push($prices, $price);
+        }
     }
 }
 
