@@ -1,4 +1,6 @@
 <?php require_once('./model/shop_model.php') ?>
+<?php require_once('./includes/helpers.php') ?>
+
 <div class="container animated fadeIn" style="min-height: 80vh;">
 	<div class="col-md-12">
 	<?php if(@$_GET['icon_sold'] == 'SOLD'): ?>
@@ -54,7 +56,7 @@
 						</div>
 						<div class="col-md-3 col-xs-6 text-center pull-left">
 							<div class="table-striped" style="padding-top: calc(20px + 2vw); padding-bottom:calc(5px + 3vw); ">
-								<a href="index.php?id=<?= $icons['id'] ?>&price_id=<?= $icons['price_id'] ?>&open=Show+Icon+Details" class="btn btn-lg btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;">Show Icon Details</a>
+								<a href="index.php?buy-icon=<?= createTitleUrlSlug($icons['name']) ?>&id=<?= $icons['id'] ?>&price_id=<?= $icons['price_id'] ?>&open=Show+Icon+Details" class="btn btn-lg btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;">Show Icon Details</a>
 							</div>
 						</div>
 					</div>

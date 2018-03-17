@@ -21,5 +21,29 @@
 		header("Location:http//localhost/orthodox-icons-shop/");
 	}
 
+    function createTitleUrlSlug($title)
+    {
+        $nameSlug = trim(mb_strtolower($title, 'UTF-8'));
+        $nameSlug = preg_replace('/-/', '', $nameSlug);
+        $nameSlug = preg_replace('/\s+/', ' ', $nameSlug);
+        $nameSlug = preg_replace('/\s+/', '-', $nameSlug);
+        $nameSlug = preg_replace('/\?/', '', $nameSlug);
+        $nameSlug = preg_replace('/(\d+).(\d+)/', '$1$2', $nameSlug);
+        $nameSlug = preg_replace('/\,/', '', $nameSlug);
+        $nameSlug = preg_replace('/\!/', '', $nameSlug);
+        $nameSlug = preg_replace('/\:/', '', $nameSlug);
+        $nameSlug = preg_replace('/\;/', '', $nameSlug);
+        $nameSlug = preg_replace('/\(/', '', $nameSlug);
+        $nameSlug = preg_replace('/\)/', '', $nameSlug);
+        $nameSlug = preg_replace('/\"/', '', $nameSlug);
+        $nameSlug = preg_replace('/\"/', '', $nameSlug);
+        $nameSlug = preg_replace('/\-–-/', '-', $nameSlug);
+        $nameSlug = preg_replace('/\&/', '', $nameSlug);
 
+        return $nameSlug;
+    }
+
+    function formatSeoDescription($description) {
+	    return preg_replace('/"/', '', $description);
+    }
 ?>

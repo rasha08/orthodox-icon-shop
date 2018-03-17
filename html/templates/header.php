@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title><?= $title ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content=<?= $description ?> />
+  <meta name="description" content="<?= $description ?>" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Latest compiled and minified CSS -->
@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.php" class="navbar-brand"> <b><?= $title ?></b></a>
+      <a href="index.php" class="navbar-brand"> <b>Orthodox Icon Shop </b></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
