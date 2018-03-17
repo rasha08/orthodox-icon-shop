@@ -5,11 +5,18 @@
   <title><?= $title ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="<?= $description ?>" />
+    <meta property="og:title" content="<?= $title ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="<?= $description ?>">
+    <meta property="og:site_name" content="Orthodox Icon Shop - Online Orthodox Store">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:article:author" content="http://orthodoxiconshop.com">
+    <meta property="og:url" content="http://<?= $_SERVER['HTTP_HOST'] ?><?= $_SERVER['REQUEST_URI'] ?>">
+    <meta property="og:image" content="http://<?= $_SERVER['HTTP_HOST'] ?>/images/<?= $image ?>.jpg">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="html/templates/css/style.css">
 <link rel="stylesheet" href="html/templates/css/style.css">
 <link rel="stylesheet" href="html/templates/css/animate.css">
 
