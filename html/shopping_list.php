@@ -25,7 +25,7 @@
 						</div>
 
 						<div class="pull-left col-md-2 text-center icon-thumb">
-							<img src="images/thumb/<?= $icons['img'] ?>.jpg" alt="icon-tumbnail" class="img-responsive img-thumbnail" style="max-height: 130px;"><br>
+							<img src="images/thumb/<?= $icons['img'] ?>.jpg" alt="<?= formatSeoDescription($icons['name']) ?>" class="img-responsive img-thumbnail" style="max-height: 130px;"><br>
 						</div>
 						<div class="pull-right col-md-2 text-center">
 							<div class="table-striped" style="padding-top: 25%; padding-bottom: 3vh;">

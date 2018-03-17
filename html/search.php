@@ -1,4 +1,6 @@
 <?php require_once('./model/search_model.php'); ?>
+<?php require_once('./includes/helpers.php') ?>
+
 <div class="template-render" style="min-height: 80vh;">
  <div class="container">
 	<div class="col-md-12 col-xs-12">
@@ -32,7 +34,7 @@
 							<p class="list-group-item-text" style="max-height: 110px; overflow-y: hidden; padding-bottom: 2vh;"><strong><?= $icons['description'] ?></strong></p>
 						</div>
 						<div class="pull-left col-md-2 col-xs-5 text-center">
-							<img src="images/thumb/<?= $icons['tumb_img'] ?>.jpg" alt="icon-tumbnail" class="img-responsive img-thumbnail" style="max-height: 130px; margin-top: calc(6px + 0.3vw)"><br>
+							<img src="images/thumb/<?= $icons['tumb_img'] ?>.jpg" alt="<?= formatSeoDescription($icons['name']) ?>" class="img-responsive img-thumbnail" style="max-height: 130px; margin-top: calc(6px + 0.3vw)"><br>
 						</div>
 						<div class="col-md-3 col-xs-6 text-center pull-left">
 							<div class="table-striped" style="padding-top: calc(20px + 2vw); padding-bottom:calc(5px + 3vw); ">

@@ -1,4 +1,5 @@
 <?php require_once('./model/open_model.php') ?>
+<?php require_once('./includes/helpers.php') ?>
 <div class="container template-render animated fadeIn" style="min-height: 80vh;">
 <?php if(@$_SESSION['auth'] == "off"): ?>
 <h4 class="text-center alert alert-danger animated zoomIn">In order to purchase any icon you have to register. Thank you!</h4>
@@ -18,7 +19,7 @@
  			</div>
  			<div></div>
  			<div class="col-md-6">
- 				<img src="images/<?= $open_icon['min_img'] ?>.jpg" class="img-responsive large-image" alt="">
+ 				<img src="images/<?= $open_icon['min_img'] ?>.jpg" class="img-responsive large-image" alt="<?= formatSeoDescription($open_icon['name']) ?>">
  				<br>
  				<form action="index.php" method="get">
  					<input type="hidden" name="id" value="<?= $open_icon['id'] ?>">
