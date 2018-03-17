@@ -1,7 +1,7 @@
 <?php
     require('model.php'); 
-    if (@$_GET['shop'] == "Proceed to Shop" || @$_GET['shop'] == "Go to Shop"){
-        
+    if (@$_GET['shop'] == "online-orthodox-store"){
+
         if (@$_GET['order_by']=='name') {
         	$sql = "SELECT * FROM icons ORDER BY name";
         }
@@ -21,7 +21,7 @@
         $result = $conn->query($sql);
     }
     else{
-         header("Location:http://localhost/orthodox-icons-shop/index.php?shop=Proceed+to+Shop");
+         header("Location:http://localhost/orthodox-icons-shop/index.php?shop=online-orthodox-store");
     }
 
 

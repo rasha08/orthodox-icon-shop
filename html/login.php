@@ -83,7 +83,7 @@
 <hr>
 <div id="register" class="animated fadeInRight">
   <h1 class="jumbotron-hr" style="font-size:calc(16px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;"><?= $title_register ?></h1>
-  <form class="form-horizontal" method="post" action="index.php?log_in=Log+In+%2F+Sign+Up" name="register" onsubmit="return validateRegister(this);">
+  <form class="form-horizontal" method="post" action="index.php?log_in=log-In-or-sign-up" name="register" onsubmit="return validateRegister(this);">
     <div class="form-group">
       <label for="registerEmail" class="col-sm-2 control-label">Email</label>
       <div class="col-sm-10">

@@ -8,6 +8,6 @@
 
     }
     else{
-         header("Location:http://localhost/orthodox-icons-shop/index.php?shop=Proceed+to+Shop");
+         header("Location:http://localhost/orthodox-icons-shop/index.php?shop=online-orthodox-store");
     }
 ?>

@@ -6,11 +6,11 @@
 	<img  class="img img-responsive center-block" src="images/<?= $open_icon['large_img'] ?>.jpg" alt="<?= formatSeoDescription($open_icon['name']) ?>">
 	<div class="col-md-3 col-md-offset-3">
 	<hr>
-		<form method="get" action="index.php">
-		 <input type="hidden" name="id" value="<?= $open_icon['id']?>">
-		 <input type="hidden" name="price_id" value="<?= $open_icon['price_id']?>">
-		 <button type="submit" name="open" value="Back To Icon Details" class="btn btn-block btn-danger"><span class="glyphicon-arrow-left glyphicon"></span>  Back To Icon Details</button><br><br>
-		 
-		</form>
-	</div>
+        <a href="index.php?open=show-orthodox-icon-details&buy-icon=<?= createTitleUrlSlug($open_icon['name']) ?>&id=<?= $open_icon['id'] ?>&price_id=<?= $open_icon['price_id'] ?>"
+           class="btn btn-block btn-danger">
+            <span class="glyphicon-arrow-left glyphicon"></span>
+              Back To Icon Details
+        </a>
+
+    </div>
 </div>

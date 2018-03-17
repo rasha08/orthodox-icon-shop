@@ -17,25 +17,25 @@
     	<div class="col-md-1 col-sm-2 col-xs-2">
     		<form action="index.php" method="get" class="form-inline block">
 	            <input type="hidden" name="order_by" value="name">
-	            <button type="submit" name="shop" value="Go to Shop" class="btn btn-default" style="font-size:calc(12px + 0.4vw); overflow-y: hidden;"><span class="glyphicon glyphicon-sort-by-alphabet"></span></button>
+	            <button type="submit" name="shop" value="online-orthodox-store" class="btn btn-default" style="font-size:calc(12px + 0.4vw); overflow-y: hidden;"><span class="glyphicon glyphicon-sort-by-alphabet"></span></button>
         </form>
     	</div>
     	<div class="col-xs-offset-1 col-md-1 col-sm-2 col-xs-2">
        		<form action="index.php" method="get" class="form-inline block">
             	<input type="hidden" name="order_by" value="name_desc">
-            	<button type="submit" name="shop" value="Go to Shop" class="btn btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;"><span class="glyphicon glyphicon-sort-by-alphabet-alt"></span></button>
+            	<button type="submit" name="shop" value="online-orthodox-store" class="btn btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;"><span class="glyphicon glyphicon-sort-by-alphabet-alt"></span></button>
         	</form>
         </div>
         <div class="col-xs-offset-1 col-md-1 col-sm-2 col-xs-2">
        		<form action="index.php" method="get" class="form-inline block">
             	<input type="hidden" name="order_by" value="id">
-            	<button type="submit" name="shop" value="Go to Shop" class="btn btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;"><span class="glyphicon glyphicon-sort-by-attributes"></span></button>
+            	<button type="submit" name="shop" value="online-orthodox-store" class="btn btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;"><span class="glyphicon glyphicon-sort-by-attributes"></span></button>
         	</form>
         </div>
         <div class="col-xs-offset-1 col-md-1 col-sm-2 col-xs-2">
        		<form action="index.php" method="get" class="form-inline block">
             	<input type="hidden" name="order_by" value="id_desc">
-            	<button type="submit" name="shop" value="Go to Shop" class="btn btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span></button>
+            	<button type="submit" name="shop" value="online-orthodox-store" class="btn btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span></button>
         	</form>
         </div>
       	</div>
@@ -56,7 +56,7 @@
 						</div>
 						<div class="col-md-3 col-xs-6 text-center pull-left">
 							<div class="table-striped" style="padding-top: calc(20px + 2vw); padding-bottom:calc(5px + 3vw); ">
-								<a href="index.php?buy-icon=<?= createTitleUrlSlug($icons['name']) ?>&id=<?= $icons['id'] ?>&price_id=<?= $icons['price_id'] ?>&open=Show+Icon+Details" class="btn btn-lg btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;">Show Icon Details</a>
+								<a href="index.php?open=show-orthodox-icon-details&buy-icon=<?= createTitleUrlSlug($icons['name']) ?>&id=<?= $icons['id'] ?>&price_id=<?= $icons['price_id'] ?>" class="btn btn-lg btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;">Show Icon Details</a>
 							</div>
 						</div>
 					</div>

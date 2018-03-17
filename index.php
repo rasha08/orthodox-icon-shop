@@ -1,8 +1,11 @@
-<?php 
-	require('./includes/helpers.php');
+<?php
+    if(session_id() == '') {
+        session_start();
+    }
+    require('./includes/helpers.php');
     require('./model/seo_icon_details.php');
 	#RENDER CONTROL
-	if (@$_GET['shop'] == "Proceed to Shop" || @$_GET['shop'] == "Go to Shop"){
+	if (@$_GET['shop'] == "online-orthodox-store"){
 		render(
 		    'templates/header',
             array(
@@ -17,7 +20,7 @@
 		destroy($_GET['shop']);
 	}
 	else if (@$_SESSION['auth']== "on" && count($_GET)<1 && count($_POST)<1){
-        header("Location:http://localhost/orthodox-icons-shop/index.php?shop=Proceed+to+Shop");
+        header("Location:http://localhost/orthodox-icons-shop/index.php?shop=online-orthodox-store");
 	}
 	else if (count(@$_GET['q'])>0){
 		render(
@@ -32,7 +35,7 @@
 		render('search', array('title' => 'Icon Shop'));
 		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
 	}
-	else if (@$_GET['open'] == "Show Icon Details" || @$_GET['open'] == "Back To Icon Details"){
+	else if (@$_GET['open'] == "show-orthodox-icon-details"){
 		render(
 		    'templates/header',
             array(
@@ -61,7 +64,7 @@
 		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
 		destroy($_GET['see_large']);
 	}
-	else if (@$_GET['log_in'] == "Log In / Sign Up"){
+	else if (@$_GET['log_in'] == "log-In-or-sign-up"){
         render(
             'templates/header',
             array(
@@ -116,7 +119,7 @@
 		destroy($_POST['log_out']);
 		go_home();
 	}
-	else if (@$_GET['shopping_list'] == 'Shopping List'){
+	else if (@$_GET['shopping_list'] == 'Shopping+List'){
         render(
             'templates/header',
             array(
@@ -144,7 +147,7 @@
 		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
 		destroy($_GET['check_out']);
 	}
-	else if (@$_GET['contact'] == "Contact" || isset($_POST['send_message'])){
+	else if (@$_GET['contact'] == "contact-us" || isset($_POST['send_message'])){
         render(
             'templates/header',
             array(
@@ -160,7 +163,7 @@
 		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
 		destroy($_GET['contact']);
 	}
-	else if (@$_GET['about'] == "About"){
+	else if (@$_GET['about'] == "about-us"){
 		render(
 		    'templates/header',
             array(

@@ -1,6 +1,5 @@
-<?php 
-	
-	if(isset($_GET['check_out']) && isset($_GET['total_cost']) && isset($_SESSION['shopping_list'])){   
+<?php
+	if(isset($_GET['check_out']) && isset($_GET['total_cost']) && isset($_SESSION['shopping_list'])){
         require('model.php'); 
 
         // Get user information from database
@@ -203,8 +202,8 @@
     send_mail_to_customer();
     send_mail_to_owner();
     unset($_SESSION['shopping_list']);
-    header("Location:http://localhost/orthodox-icons-shop/index.php?shop=Proceed+to+Shop&icon_sold=SOLD");
-   }else{
+    header("Location:http://localhost/orthodox-icons-shop/index.php?shop=online-orthodox-store&icon_sold=SOLD");
+   }else if (isset($_GET['check_out'])){
     unset($_SESSION['shopping_list']);
     header('Location:http://localhost/orthodox-icons-shop/index.php?shopping_list=Shopping+List');
    }

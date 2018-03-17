@@ -38,7 +38,7 @@
 						</div>
 						<div class="col-md-3 col-xs-6 text-center pull-left">
 							<div class="table-striped" style="padding-top: calc(20px + 2vw); padding-bottom:calc(5px + 3vw); ">
-								<a href="index.php?id=<?= $icons['id'] ?>&price_id=<?= $icons['price_id'] ?>&open=Show+Icon+Details" class="btn btn-lg btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;">Show Icon Details</a>
+                                <a href="index.php?open=show-orthodox-icon-details&buy-icon=<?= createTitleUrlSlug($icons['name']) ?>&id=<?= $icons['id'] ?>&price_id=<?= $icons['price_id'] ?>" class="btn btn-lg btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;">Show Icon Details</a>
 							</div>
 						</div>
 					</div>

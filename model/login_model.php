@@ -24,10 +24,10 @@
         $num_rows_check_banned = mysqli_num_rows($result_check_banned);
 
         if ($result == false){
-            header("Location:http://localhost/orthodox-icons-shop/index.php?log_in=Log+In+%2F+Sign+Up&status=something-went-wrong");
+            header("Location:http://localhost/orthodox-icons-shop/index.php?log_in=log-In-or-sign-up&status=something-went-wrong");
         }
         elseif ($num_rows_check_banned == 1){
-            header("Location:http://localhost/orthodox-icons-shop/index.php?log_in=Log+In+%2F+Sign+Up&status=banned");
+            header("Location:http://localhost/orthodox-icons-shop/index.php?log_in=log-In-or-sign-up&status=banned");
         }
         // check whether we found a row
         elseif($num_rows == 1)
@@ -40,15 +40,15 @@
             $_SESSION["user_id"] = $user_info['id'];
             // remember that user's logged in
             $_SESSION["auth"] = "on";
-            header("Location:http://localhost/orthodox-icons-shop/index.php?shop=Proceed+to+Shop");
+            header("Location:http://localhost/orthodox-icons-shop/index.php?shop=online-orthodox-store");
             $conn->close();
             exit;
         }
         elseif ($num_rows_only_email == 1) {
-            header("Location:http://localhost/orthodox-icons-shop/index.php?log_in=Log+In+%2F+Sign+Up&status=password");
+            header("Location:http://localhost/orthodox-icons-shop/index.php?log_in=log-In-or-sign-up&status=password");
         }
         else{
-            header("Location:http://localhost/orthodox-icons-shop/index.php?log_in=Log+In+%2F+Sign+Up&status=not-registered");
+            header("Location:http://localhost/orthodox-icons-shop/index.php?log_in=log-In-or-sign-up&status=not-registered");
         }
     }  
     $conn->close();

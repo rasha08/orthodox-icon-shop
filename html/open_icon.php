@@ -62,7 +62,7 @@
  					<input type="hidden" name="icon_name" value="<?= $open_icon['name'] ?>">
  					<input type="hidden" name="icon_img" value="<?= $open_icon['tumb_img'] ?>">
  					<input type="hidden" name="price_id" value="<?= $open_icon['price_id'] ?>">
- 					<button type="submit" value="Add to Shopping List!" class="btn btn-success btn-lg"><span class="glyphicon-shopping-cart glyphicon"></span>  Add to Shopping List!</button><br><br>
+ 					<button type="submit" value="Add to Shopping List" class="btn btn-success btn-lg"><span class="glyphicon-shopping-cart glyphicon"></span>  Add to Shopping List!</button><br><br>
  			<?php endif ?>
  			</div>
  		</div>

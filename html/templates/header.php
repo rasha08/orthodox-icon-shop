@@ -95,13 +95,13 @@
       <div class="col-md-5">
       <ul class="nav navbar-nav nav-pills col-md-12">
         <li class="col-md-4">
-             <a href="index.php?shop=Go+to+Shop" class="btn btn-link btn-group btn-lg"><span class="glyphicon-list-alt glyphicon"></span>  Go to Shop</a>
+             <a href="index.php?shop=online-orthodox-store" class="btn btn-link btn-group btn-lg"><span class="glyphicon-list-alt glyphicon"></span>  Go to Shop</a>
         </li>
         <li class="col-md-3">
-          <a href="index.php?about=About" class="btn btn-link btn-group btn-lg"><span class="glyphicon-user glyphicon"></span>  About</a>
+          <a href="index.php?about=about-us" class="btn btn-link btn-group btn-lg"><span class="glyphicon-user glyphicon"></span>  About</a>
           </li>
         <li class="col-md-3">
-            <a href="index.php?contact=Contact" class="btn btn-link btn-group btn-lg "><span class="glyphicon-envelope glyphicon"></span>  Contact</a>
+            <a href="index.php?contact=contact-us" class="btn btn-link btn-group btn-lg "><span class="glyphicon-envelope glyphicon"></span>  Contact</a>
           </form>
         </li>
       </ul>
@@ -111,13 +111,13 @@
         <?php if(@$_SESSION['auth'] == 'off'): ?>
         <li class="col-md-offset-4 col-md-6">
           <form method="get" action="index.php">
-            <button name="log_in" type="submit" value="Log In / Sign Up" class="btn btn-link btn-group btn-lg text-center"><span class="glyphicon-log-in glyphicon"></span>  Log In / Sign Up</button>
+            <button name="log_in" type="submit" value="log-In-or-sign-up" class="btn btn-link btn-group btn-lg text-center"><span class="glyphicon-log-in glyphicon"></span>  Log In / Sign Up</button>
           </form>
         </li>
         <?php elseif(@$_SESSION['auth'] == 'on'): ?>
         <li class="col-md-5">
           <form method="get" action="index.php">
-            <button name="shopping_list" type="submit" value="Shopping List" class="btn btn-link btn-group btn-lg text-center"><span class="glyphicon-list glyphicon"></span>  Shopping List</button>
+            <button name="shopping_list" type="submit" value="Shopping+List" class="btn btn-link btn-group btn-lg text-center"><span class="glyphicon-list glyphicon"></span>  Shopping List</button>
           </form>
         </li>
         <li class="col-md-5">

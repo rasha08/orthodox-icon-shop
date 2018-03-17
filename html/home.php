@@ -13,7 +13,7 @@
 				<p class="lead"><?= $third ?></p>
 		        <p class="lead">
 		        <br>
-		            <a href="index.php?shop=Proceed+to+Shop" class="btn btn-lg btn-default">Proceed to Shop</a>
+		            <a href="index.php?shop=online-orthodox-store" class="btn btn-lg btn-default">Proceed to Shop</a>
 		        </p>
 		    </div>
 		</div>

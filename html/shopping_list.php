@@ -5,9 +5,10 @@
 	<?php $total_cost = 0; ?>
 	<div class="col-md-4 col-md-offset-5">
 	 		<form method="get" action="index.php">
-	 			<button type="submit" name="shop" value="Go to Shop" class="btn btn-danger"><span class="glyphicon-arrow-left glyphicon"></span>  Back to Shop</button><br><br>
+	 			<button type="submit" name="shop" value="online-orthodox-store" class="btn btn-danger"><span class="glyphicon-arrow-left glyphicon"></span>  Back to Shop</button><br><br>
 			</form>
 		</div>
+
 	<?php if (isset($_SESSION['shopping_list']) && count($_SESSION['shopping_list'])>0): ?>
 		<h1 class="jumbotron-hr col-md-12">Your Shoppping List</h1>
 		<?php for ($i=0; $i<count($_SESSION['shopping_list']); $i++):?>

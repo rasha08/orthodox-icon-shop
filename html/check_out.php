@@ -4,7 +4,7 @@
 	<div class="col-md-12">
 	<div class="col-md-4 col-md-offset-5">
 	 		<form method="get" action="index.php">
-	 			<button type="submit" name="shopping_list" value="Shopping List" class="btn btn-danger"><span class="glyphicon-arrow-left glyphicon"></span>  Back to Shopping list</button><br><br>
+	 			<button type="submit" name="shopping_list" value="Shopping+List" class="btn btn-danger"><span class="glyphicon-arrow-left glyphicon"></span>  Back to Shopping list</button><br><br>
 			</form>
 		</div>
 	<hr class="col-md-12">
