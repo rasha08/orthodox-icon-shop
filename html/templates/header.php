@@ -11,8 +11,15 @@
     <meta property="og:site_name" content="Orthodox Icon Shop - Online Orthodox Store">
     <meta property="og:locale" content="en_US">
     <meta property="og:article:author" content="http://orthodoxiconshop.com">
-    <meta property="og:url" content="http://<?= $_SERVER['HTTP_HOST'] ?><?= $_SERVER['REQUEST_URI'] ?>">
-    <meta property="og:image" content="http://<?= $_SERVER['HTTP_HOST'] ?>/images/<?= $image ?>.jpg">
+    <meta property="og:url" content="<?= $url ?>">
+    <meta property="og:image" content="<?= $image ?>">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="<?= $url ?>">
+    <meta name="twitter:title" content="<?= $title ?>">
+    <meta name="twitter:description" content="<?= $description ?>">
+    <meta name="twitter:image" content="<?= $image ?>">
+    <meta name="twitter:site" content="@ortho_icons">
+    <meta name="twitter:creator" content="@ortho_icons">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Latest compiled and minified CSS -->
