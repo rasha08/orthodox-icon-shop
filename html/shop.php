@@ -1,5 +1,5 @@
-<?php require_once('./model/shop_model.php') ?>
 <?php require_once('./includes/helpers.php') ?>
+<?php require_once('./model/shop_model.php') ?>
 
 <div class="container animated fadeIn" style="min-height: 80vh;">
 	<div class="col-md-12">

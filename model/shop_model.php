@@ -1,4 +1,4 @@
- <?php    
+<?php
     require('model.php'); 
     if (@$_GET['shop'] == "Proceed to Shop" || @$_GET['shop'] == "Go to Shop"){
         

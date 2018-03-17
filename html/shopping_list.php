@@ -1,4 +1,6 @@
+<?php require_once('./includes/helpers.php') ?>
 <?php require_once('./model/shopping_list_model.php') ?>
+
 <div class="container template-render animated fadeIn" style="min-height: 86vh;">
 	<?php $total_cost = 0; ?>
 	<div class="col-md-4 col-md-offset-5">

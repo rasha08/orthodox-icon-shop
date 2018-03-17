@@ -1,4 +1,4 @@
- <?php    
+<?php
     require('model.php'); 
 
     $id = @$_GET['id'];

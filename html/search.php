@@ -1,5 +1,5 @@
-<?php require_once('./model/search_model.php'); ?>
 <?php require_once('./includes/helpers.php') ?>
+<?php require_once('./model/search_model.php'); ?>
 
 <div class="template-render" style="min-height: 80vh;">
  <div class="container">

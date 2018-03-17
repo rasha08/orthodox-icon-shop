@@ -1,4 +1,4 @@
- <?php    
+<?php
     require('model.php');  
 
 	if (isset($_GET['q'])) {

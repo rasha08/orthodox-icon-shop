@@ -17,18 +17,7 @@
 		destroy($_GET['shop']);
 	}
 	else if (@$_SESSION['auth']== "on" && count($_GET)<1 && count($_POST)<1){
-		render(
-		    'templates/header',
-            array(
-                'title' => 'Orthodox Icon Shop - Online Orthodox Store',
-                'description' => 'Here at our store you can find a big selection of the traditional Orthodox religious items in the ancient Russian, Greek and Byzantine styles. We have one of the most comprehensive Greek, Ukrainian and Russian wooden-base icons collection that includes artisant reproductions of famous prototype orthodox icons as well as custom made pre-order icons.',
-                'image' => "http://".$_SERVER['HTTP_HOST']."/images/003-min.jpg",
-                'url' => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']
-            )
-        );
-		render('shop', array('title' => 'Orthodox Icon Shop - Online Orthodox Store'));
-		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
-		destroy($_GET['shop']);
+        header("Location:http://localhost/orthodox-icons-shop/index.php?shop=Proceed+to+Shop");
 	}
 	else if (count(@$_GET['q'])>0){
 		render(
@@ -78,15 +67,22 @@
             array(
                 'title' => 'Orthodox Icon Shop - Buy Orthodox Icon - Login or Register',
                 'description' => 'Register or Login to our Orthodox Icon Shop in order to purchase high quality orthodox icons',
-                'image' => "http://".$_SERVER['HTTP_HOST']."/images/024-min.jpg",
+                'image' => "http://".$_SERVER['HTTP_HOST']."/images/014-min.jpg",
                 'url' => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']
             )
         );
+
 		render('login', array('title' => 'Please log in to your existing account',
 			'title_register' => 'If you are new to our website, please register in order to buy Icons'));
 		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
 		destroy($_GET['log_in']);
 	}
+    else if (@$_GET['log_in'] == "try"){
+        render('login', array('title' => 'Please log in to your existing account',
+            'title_register' => 'If you are new to our website, please register in order to buy Icons'));
+        destroy($_GET['log_in']);
+    }
+
 	else if (@$_GET['web_master'] == "WebMaster_Zone_login"){
 		render(
 		    'templates/header',
@@ -115,15 +111,6 @@
 		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
 	}
 	else if (@$_POST['logout'] == "Log Out" || @$_POST['logout'] == "Log Out From Web Master Zone"){
-        render(
-            'templates/header',
-            array(
-                'title' => 'Orthodox Icon Shop',
-                'description' => 'Orthodox Icon Shop',
-                'image' => "http://".$_SERVER['HTTP_HOST']."/images/014-min.jpg",
-                'url' => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']
-            )
-        );
 		render('logout', array('title' => 'You are loged out!'));
 		render('templates/footer', array('copy' => 'All rights recived. Orthodox Icon Shop'));
 		destroy($_POST['log_out']);

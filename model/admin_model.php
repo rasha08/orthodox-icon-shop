@@ -1,4 +1,4 @@
- <?php    
+<?php
     require('model.php'); 
     if(@$_SESSION['admin_auth'] == 'on'){
 

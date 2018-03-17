@@ -1,5 +1,5 @@
-<?php require_once('./model/open_model.php') ?>
 <?php require_once('./includes/helpers.php') ?>
+<?php require_once('./model/open_model.php') ?>
 <div class="container template-render animated fadeIn" style="min-height: 80vh;">
 <?php if(@$_SESSION['auth'] == "off"): ?>
 <h4 class="text-center alert alert-danger animated zoomIn">In order to purchase any icon you have to register. Thank you!</h4>
