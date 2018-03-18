@@ -1,4 +1,4 @@
-<div class="text-center container template-render animated fadeIn" style="min-height: 84vh;">
+<div class="text-center container template-render animated fadeIn home">
 	<div class="col-md-12">
 		<div class="cover-container">
 		    <div class="masthead clearfix">

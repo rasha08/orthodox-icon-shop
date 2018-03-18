@@ -1,4 +1,4 @@
-<div class="template-render animated fadeIn" style="min-height: 80vh;">
+<div class="template-render animated fadeIn about">
 <div id="about">
 	<div class="container">
 		<div class="jumbotron-fluid">

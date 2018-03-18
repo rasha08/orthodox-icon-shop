@@ -44,21 +44,21 @@
     return true;
   }
 </script>
-<div class="template-render animated fadeIn" style="min-height: 83.5vh;">
-<div class="col-md-12 col-xs-12"><h4 class="text-center alert alert-danger animated zoomIn" id="alert" style="display: none;"></h4></div>
+<div class="template-render animated fadeIn login">
+<div class="col-md-12 col-xs-12"><h4 class="text-center alert alert-danger animated zoomIn" id="alert"></h4></div>
     <?php if(@$_GET['status'] === 'something-went-wrong'): ?>
-        <h4 class="text-center alert alert-info" style="font-size:calc(18px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;">Something went wrong, please try again in couple of minutes.</h4>
+        <h4 class="text-center alert alert-info">Something went wrong, please try again in couple of minutes.</h4>
     <?php elseif (@$_GET['status'] === 'banned'): ?>
-        <h4 class="text-center alert alert-danger" style="font-size:calc(18px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;">This account has been banned form website.</h4>
+        <h4 class="text-center alert alert-danger">This account has been banned form website.</h4>
     <?php elseif (@$_GET['status'] === 'password'): ?>
-        <h4 class="text-center alert alert-warning" style="font-size:calc(18px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;">Wrong Password.</h4>
+        <h4 class="text-center alert alert-warning">Wrong Password.</h4>
     <?php elseif (@$_GET['status'] === 'not-registered'): ?>
-        <h4 class="text-center alert alert-info" style="font-size:calc(18px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;">You don't have account yet? Please Register!.</h4>
+        <h4 class="text-center alert alert-info">You don't have account yet? Please Register!.</h4>
     <?php endif; ?>
     <div class="container">
 <div id="login" class="animated fadeInLeft">
 <hr>
-  <h1 class="jumbotron-hr" style="font-size:calc(16px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;"><?= $title ?></h1>
+  <h1 class="jumbotron-hr"><?= $title ?></h1>
   <form class="form-horizontal" method="post" action="index.php?log_in=try" name="login" onsubmit="return validateLogin(this);">
     <div class="form-group">
       <label class="col-sm-2 control-label">Email</label>
@@ -82,7 +82,7 @@
 <hr>
 <hr>
 <div id="register" class="animated fadeInRight">
-  <h1 class="jumbotron-hr" style="font-size:calc(16px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;"><?= $title_register ?></h1>
+  <h1 class="jumbotron-hr"><?= $title_register ?></h1>
   <form class="form-horizontal" method="post" action="index.php?log_in=log-In-or-sign-up" name="register" onsubmit="return validateRegister(this);">
     <div class="form-group">
       <label for="registerEmail" class="col-sm-2 control-label">Email</label>

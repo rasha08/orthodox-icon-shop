@@ -1,5 +1,5 @@
 <?php require('./includes/contact.php'); ?>
-<div class="template-render animated fadeIn" style="min-height: 80vh;">
+<div class="template-render animated fadeIn contact">
 	<div class="contact container">
 		<div class="jumbotron-fluid">
 			<h2><?= $title ?></h2>

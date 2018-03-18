@@ -1,6 +1,6 @@
 <?php require_once('./includes/helpers.php') ?>
 <?php require_once('./model/open_model.php') ?>
-<div class="container template-render animated fadeIn" style="min-height: 80vh;">
+<div class="container template-render animated fadeIn open-icon">
 <?php if(@$_SESSION['auth'] == "off"): ?>
 <h4 class="text-center alert alert-danger animated zoomIn">In order to purchase any icon you have to register. Thank you!</h4>
 <?php endif ?>
@@ -13,7 +13,7 @@
  	<div class="row">
  		<div>
  			<div class="col-md-12">
- 				<h1 class="animated fadeInDown" style="font-size:calc(18px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;"><?= $open_icon['name'] ?> <small class="text-muted">(id: <?= $open_icon['id'] ?>)</small></h1>
+ 				<h1 class="animated fadeInDown"><?= $open_icon['name'] ?> <small class="text-muted">(id: <?= $open_icon['id'] ?>)</small></h1>
  				<input type="hidden" name="icon_id" value="<?= $open_icon['id'] ?>">
  				<hr>
  			</div>
@@ -56,7 +56,7 @@
  			</div>
  			<div class="col-md-12">
  			<?php if(@$_SESSION['auth'] == "off"): ?>
- 				<span class="btn btn-danger btn-lg btn-block disabled"><span class=" glyphicon glyphicon-exclamation-sign"></span><span style="font-size:calc(11px + 0.5vw); font-weight: bold;"> Please register or log in!</span></span><br><br>
+ 				<span class="btn btn-danger btn-lg btn-block disabled"><span class=" glyphicon glyphicon-exclamation-sign"></span><span> Please register or log in!</span></span><br><br>
  			<?php elseif(@$_SESSION['auth'] == "on"): ?>
  					<input type="hidden" name="icon_id" value="<?= $open_icon['id'] ?>">
  					<input type="hidden" name="icon_name" value="<?= $open_icon['name'] ?>">

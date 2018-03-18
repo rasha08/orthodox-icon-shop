@@ -26,8 +26,8 @@
 				<?php foreach ($_SESSION['shopping_list'] as $i => $icons) : ?>
 				<tr>	
 					<td>
-
-						<h4># <?= $i+1 ?></h4>
+                        <?php $b = $i ?>
+						<h4># <?= $b+1 ?></h4>
 					</td>
 					<td>
 						<h3 style="font-size:calc(16px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;"><?= $icons['name'] ?> <span class="text-muted">(id: <?= $icons['id'] ?>)</span></h3>

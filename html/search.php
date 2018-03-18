@@ -1,12 +1,12 @@
 <?php require_once('./includes/helpers.php') ?>
 <?php require_once('./model/search_model.php'); ?>
 
-<div class="template-render" style="min-height: 80vh;">
+<div class="template-render search">
  <div class="container">
 	<div class="col-md-12 col-xs-12">
 		<form action="index.php" method="get" class="form-inline block">
-            <input type="text" name="q" class="form-control" placeholder="Search..." style="width: 60%; display: inline-block;">
-            <input type="submit" class="btn btn-default" value="Search" style="display: inline-block;">
+            <input type="text" name="q" class="form-control" placeholder="Search...">
+            <input type="submit" class="btn btn-default" value="Search">
          </form>
         <?php if(mysqli_num_rows($result)>1): ?>
 		<h3 class="text-center alert alert-success animated zoomIn">Found <?= mysqli_num_rows($result) ?> results</h3>
@@ -28,17 +28,17 @@
 	<?php while ($icons = $result->fetch_array(MYSQLI_ASSOC)):?>
 			
 				<div class="col-md-12">
-					<div class="list-group-item table-bordered" style="color: #000; min-height: calc(500px - 50vw); margin-top: calc(2px + 1vw); overflow-y: hidden;" >
+					<div class="list-group-item table-bordered">
 						<div class="col-md-7 col-xs-12">
-							<h2 class="list-group-item-heading" style="font-size:calc(16px + 0.7vw); padding-left: calc(2px + 0.5vw); font-weight: bold;"><?= $icons['name'] ?><small class="text-muted"> (id: <?= $icons['id'] ?>)</small></h2>
-							<p class="list-group-item-text" style="max-height: 110px; overflow-y: hidden; padding-bottom: 2vh;"><strong><?= $icons['description'] ?></strong></p>
+							<h2 class="list-group-item-heading"><?= $icons['name'] ?><small class="text-muted"> (id: <?= $icons['id'] ?>)</small></h2>
+							<p class="list-group-item-text"><strong><?= $icons['description'] ?></strong></p>
 						</div>
 						<div class="pull-left col-md-2 col-xs-5 text-center">
-							<img src="images/thumb/<?= $icons['tumb_img'] ?>.jpg" alt="<?= formatSeoDescription($icons['name']) ?>" class="img-responsive img-thumbnail" style="max-height: 130px; margin-top: calc(6px + 0.3vw)"><br>
+							<img src="images/thumb/<?= $icons['tumb_img'] ?>.jpg" alt="<?= formatSeoDescription($icons['name']) ?>" class="img-responsive img-thumbnail"><br>
 						</div>
 						<div class="col-md-3 col-xs-6 text-center pull-left">
-							<div class="table-striped" style="padding-top: calc(20px + 2vw); padding-bottom:calc(5px + 3vw); ">
-                                <a href="index.php?open=show-orthodox-icon-details&buy-icon=<?= createTitleUrlSlug($icons['name']) ?>&id=<?= $icons['id'] ?>&price_id=<?= $icons['price_id'] ?>" class="btn btn-lg btn-default" style="font-size:calc(9px + 0.7vw); overflow-y: hidden;">Show Icon Details</a>
+							<div class="table-striped">
+                                <a href="index.php?open=show-orthodox-icon-details&buy-icon=<?= createTitleUrlSlug($icons['name']) ?>&id=<?= $icons['id'] ?>&price_id=<?= $icons['price_id'] ?>" class="btn btn-lg btn-default">Show Icon Details</a>
 							</div>
 						</div>
 					</div>
